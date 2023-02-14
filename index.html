@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your baaper bank</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    module.exports = {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+
+  <!-- bank header section  -->
+  <header>
+    <h1 class="font-medium mt-8 text-center text-4xl">Your <span class="text-red-400">baaper bank</span> !! </h1>
+  </header>
+
+
+  <!-- main section  -->
+  <main>
+
+
+    <!-- bank calculating section  -->
+    <section class="mt-5">
+<div class="grid grid-cols-3 gap-3 text-white w-3/4 mx-auto">
+  <div class="p-8 bg-green-500 rounded">
+    <h4 class="text-2xl ">Deposit</h4>
+    <h2 class="text-3xl font-medium">$<span id="deposit-total" class="">000</span></h2>
+
+  </div>
+  <div class="p-8 bg-blue-500 rounded">
+    <h4 class="text-2xl ">Withdraw</h4>
+    <h2 class="text-3xl font-medium">$<span id="withdraw-total" class="">000</span></h2>
+
+  </div>
+  <div class="p-8 bg-sky-500 rounded">
+    <h4 class="text-2xl ">Balance</h4>
+    <h2 class="text-3xl font-medium">$<span id="balance-total" class="">1240</span></h2>
+
+  </div>
+
+</div>
+
+    </section>
+
+
+    <section class="mt-5 relative">
+      <div class="grid grid-cols-2 gap-3 w-3/4 mx-auto">
+
+        <div class="p-8 bg-purple-500 rounded">
+          <h4 class="text-2xl text-white">Your Deposit</h4>
+          <input id="deposit-value" type="number" class="block w-3/4 p-1  mt-2 rounded">
+          <button class="rounded px-6 py-2 bg-blue-700 hover:bg-blue-400 mt-2 text-white" id="deposit-btn">Deposit</button>
+
+        </div>
+        <div class="p-8 bg-cyan-500 rounded">
+          <h4 class="text-2xl text-white">Your Withdraw</h4>
+          <input id="withdraw-value" type="number" class="block w-3/4 p-1  mt-2 rounded">
+          <button class="rounded px-6 py-2 bg-blue-700 hover:bg-blue-400 mt-2 text-white" id="withdraw-btn">Withdraw</button>
+
+        </div>
+      </div>
+
+      <div id="errorBox" class=" gap-3 absolute w-full top-0  hidden">
+        <div class="p-8 bg-red-500 rounded  w-5/12 mx-auto relative text-white border">
+          <h2 class="text-2xl decoration-gray-700">Something is wrong</h2>
+          <h4 class="text-3xl mt-3" id="problemMsg">this is your problem </h4>
+          <button id="msgButton" class="px-3 py-1 rounded absolute right-0 bottom-0 bg-white text-black">OK</button>
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+  <script src="js/utilities.js"></script>
+  <script src="js/deposit.js"></script>
+  <script src="js/withdraw.js"></script>
+</body>
+
+</html>
